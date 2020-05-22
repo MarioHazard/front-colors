@@ -1,26 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { ColorService } from './services/color.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
   title = 'front-colors';
-  colors: any[] =[];
-  constructor(protected colorService: ColorService) {
-
-  }
-  ngOnInit() { 
-    this.colorService.getAllColors().subscribe((response) => { 
-        // Success
-        this.colors = response['data'];
-        console.log(this.colors);
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }
 }
