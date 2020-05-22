@@ -1,27 +1,30 @@
-# FrontColors
+# Front colors
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
+Plataforma desarrollada en [Angular](https://angular.io/) v8.3.5. Permite la visualización de una lista de colores y sus propiedades, consumidos de una API mediante REST. Además permite copiar el nombre del color al portapapeles.
 
-## Development server
+## Recursos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Existe un repositorio disponible en  [git](https://github.com/MarioHazard/front-colors).
 
-## Code scaffolding
+Existe una versión [online](https://front-colors-impl.herokuapp.com/index.html) en Heroku.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalación
 
-## Build
+Utilizar [npm](https://www.npmjs.com/) v6.14.4 para instalar las dependencias.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+npm i
+```
+Utilizar Angular CLI para levantar el servidor en local. `http://localhost:4200`
+```bash
+ng serve
+```
+Desde un servidor con [nginx](https://www.nginx.com/) utilizar
+```bash
+ng build --prod
+```
+Y mover los recursos de la carpeta /dist/front-colors/ a /var/www/html/
+## Uso
+- En la vista principal aparece una cuadrilla con los colores, su nombre, año, código y valor pantone. Se puede navegar por las distintas páginas para ir cargando nuevos colores. Se visualizan 9 colores, excepto en la última página que son los restantes.
+- Al hacer click en un color, éste se copiará al portapapeles, un mensaje de aviso se ve por 1.5 segundos.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
